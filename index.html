@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre em contato</title>
+    <!-- CSS Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!--script da api do email-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("w7gCOP_sx7WOkH1Lr");
+        })();
+    </script>
+    <!--link do javascript-->
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="container border mt-3 bg-light">
+        <div class="row">
+            <div class="col-md-6 p-5 bg-primary text-white">
+                <h1>Olá!</h1>
+                <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, doloribus?</h4>
+            </div>
+            <div class="col-md-6 py-3">
+                <h1>Formulário de contato</h1>
+
+                <div class="form-group">
+                    <h5 for="name">Nome</h5>
+                    <input type="text" class="form-control" id="name" placeholder="Coloque o seu nome">
+                </div>
+                <div class="form-group">
+                    <h5 for="email">Email</h5>
+                    <input type="email" class="form-control" id="email" placeholder="Coloque o seu E-mail">
+                </div>
+                <div class="form-group">
+                    <h5 for="message">Mensagem</h5>
+                    <textarea id="message" rows="3" class="form-control"></textarea>
+                </div>
+                <button class="btn btn-primary" onclick="sendMail()">Submit</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
